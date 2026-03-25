@@ -1,10 +1,18 @@
-nilai = int(input("Masukkan nilai: "))
+#include <stdio.h>
 
-if nilai >= 90:
-    print("A")
-elif nilai >= 75:
-    print("B")
-elif nilai >= 60:
-    print("C")
-else:
-    print("D")
+void printArrayValues(int scores[], int scores_len);
+
+int main() {
+    int scores[] = {-27, 87, 34};
+    int scores_length = sizeof(scores) / sizeof(scores[0]);
+
+    printArrayValues(scores, scores_length);
+
+    return 0;
+}
+
+void printArrayValues(int scores[], int scores_len) {
+    for (int i = 0; i < scores_len; i++) {
+        printf("%d ", scores[i]);
+    }
+}
