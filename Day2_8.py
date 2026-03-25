@@ -1,8 +1,16 @@
-def faktorial(n):
-    if n == 1:
-        return 1
-    else:
-        return n * faktorial(n - 1)
+#include <stdio.h>
 
-angka = int(input("Masukkan angka: "))
-print("Hasil faktorial:", faktorial(angka))
+int faktorial(int n) {
+    if (n == 0) {
+        return 1;  // base case
+    } else {
+        return n * faktorial(n - 1);  // rekursif
+    }
+}
+
+int main() {
+    int hasil = faktorial(5);
+    printf("Hasil: %d\n", hasil);
+
+    return 0;
+}
