@@ -1,5 +1,17 @@
-angka = [5, 2, 9, 1, 7]
+#include <stdio.h>
 
-angka.sort()
+void ubahNilai(int *x) {
+    *x = 100; 
+}
 
-print("Data setelah diurutkan:", angka)
+int main() {
+    int angka = 10;
+
+    printf("Sebelum: %d\n", angka);
+
+    ubahNilai(&angka);  
+
+    printf("Sesudah: %d\n", angka);
+
+    return 0;
+}
